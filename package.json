@@ -1,0 +1,11 @@
+{
+  "name": "serverless-example",
+  "version": "0.1.0",
+  "description": "Serverless example from LogRocket",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob Ranf",
+  "license": "ISC"
+}
