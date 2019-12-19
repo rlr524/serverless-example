@@ -12,6 +12,7 @@
 # Happy Coding!
 
 service: serverless-example
+app: product-api
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -23,6 +24,8 @@ service: serverless-example
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: dev
+  region: us-west-2
 
 # you can overwrite defaults here
 #  stage: dev
@@ -58,8 +61,25 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  productAPI:
+    handler: Controller/products.handler
+    events:
+      - http:
+        path: /index
+        method: get
+      - http:
+        path: /
+        method: post
+      - http:
+        path: /
+        method: get
+      - http:
+        path: /{productId}
+        method: get
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
