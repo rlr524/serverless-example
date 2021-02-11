@@ -4,23 +4,22 @@
   "description": "Serverless example from LogRocket",
   "main": "handler.js",
   "scripts": {
-    "start": "node handler.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rob Ranf",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "eslint": "^6.8.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.1",
-    "serverless": "^1.48.1",
+    "mongoose": "^5.11.15",
+    "serverless": "^1.83.2",
     "serverless-dotenv": "^1.0.0-beta.2",
-    "serverless-http": "^2.3.0",
+    "serverless-http": "^2.7.0",
     "serverless-offline": "^5.12.1",
-    "uuid": "^3.3.3"
+    "uuid": "^3.4.0"
   },
   "repository": {
     "type": "git",
